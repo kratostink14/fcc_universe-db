@@ -1,10 +1,42 @@
-# Universe Database
-This is a celestial bodies database created as part of the freeCodeCamp "Relational Database" certification.
+# База данных Вселенной
 
-### Technologies used:
-* PostgreSQL
-* SQL
-* Bash
+База данных небесных тел, созданная в рамках сертификации [freeCodeCamp Relational Database](https://www.freecodecamp.org/learn/relational-database/).
 
-### Project structure:
-The database includes tables for galaxies, stars, planets, and moons, with properly defined primary and foreign keys.
+## Технологии
+
+- **PostgreSQL** — хранение данных
+- **SQL** — создание таблиц и запросы
+- **Bash** — работа с базой через терминал
+
+## Структура базы данных
+
+| Таблица    | Описание                        |
+|------------|---------------------------------|
+| `galaxies` | Галактики                       |
+| `stars`    | Звёзды                          |
+| `planets`  | Планеты                         |
+| `moons`    | Луны                            |
+
+Все таблицы связаны через первичные и внешние ключи.
+
+## Установка
+
+**1. Восстановить базу данных**
+
+```bash
+psql --username=postgres -c "CREATE DATABASE universe;"
+psql --username=postgres universe < universe.sql
+```
+
+**2. Подключиться**
+
+```bash
+psql --username=freecodecamp --dbname=universe
+```
+
+## Чему я научился
+
+- Проектирование реляционных баз данных
+- Работа с первичными и внешними ключами
+- Написание SQL-запросов в psql
+
